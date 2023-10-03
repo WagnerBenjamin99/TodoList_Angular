@@ -1,0 +1,12 @@
+.task{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.task *{
+    margin: 10px;
+}

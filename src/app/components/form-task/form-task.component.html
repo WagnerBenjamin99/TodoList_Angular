@@ -1,0 +1,30 @@
+<div class="form-container">
+    <h2>Nueva Tarea</h2>
+    <form (ngSubmit)="addTodo()">
+      <div class="form-group">
+        <label for="title">Título:</label>
+        <input type="text" id="title" [(ngModel)]="title" name="title" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Descripción:</label>
+        <textarea id="description" [(ngModel)]="description" name="description"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="state">Estado:</label>
+        <select id="state" *[(ngModel)]="state" name="state">
+          <option value="PENDIENTE">Pendiente</option>
+          <option value="EN_PROGRESO">En Progreso</option>
+          <option value="COMPLETADA">Completada</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <button type="submit">Agregar Tarea</button>
+      </div>
+    </form>
+  </div>
+ 
+  
+  
+  
+  
+  
