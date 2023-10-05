@@ -1,0 +1,22 @@
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.form-container div{
+    display: flex;
+    margin: 10px;
+}
+.task-form{
+    display: flex;
+    border: 2px solid rgb(156, 2, 156);
+    text-align: center;
+}
+.btn-add{
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(156, 2, 156);
+    color: white;
+}

@@ -16,6 +16,7 @@ export class FormTaskComponent{
 
   constructor(private taskSerice : TaskService){}
 
+  public id : number = 0;
   public  title : string= '';
   public description : string = '';
   public state : State = State.PENDIENTE;
@@ -23,6 +24,7 @@ export class FormTaskComponent{
 
   public addTodo() {
     const newTodo: task = {
+      id : Math.random(),
       name : this.title,
       description: this.description,
       state: this.state,

@@ -4,9 +4,34 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin: 5px;
+    box-shadow: 0px 1px 6px;
+    margin-bottom: 20px;
 
 }
 
 .task *{
     margin: 10px;
+}
+
+.btn-task{
+    border:none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.btn-delete .material-symbols-outlined{
+    color: red;
+}
+.btn-edit .material-symbols-outlined{
+    color:black;
+}
+
+
+
+#state{
+    height: 15px;
+    width: 15px;
+    margin-left: 40px;
+    
 }

@@ -6,3 +6,10 @@
     box-sizing: border-box;
     font-family: 'Roboto Slab', serif;
 }
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

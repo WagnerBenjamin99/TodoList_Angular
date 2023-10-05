@@ -1,4 +1,5 @@
 export interface task {
+    id : number,
     name : String,
     description : String,
     dateLimit? : Date,
@@ -6,6 +7,6 @@ export interface task {
 }
 
 export enum State {
-    PENDIENTE,
-    COMPLETADA
+    PENDIENTE='PENDIENTE',
+    COMPLETADA='COMPLETADA'
 }

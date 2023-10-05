@@ -9,9 +9,32 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public tasks?: task[];
+  public tasks?: task[] ;
+  /* [
+    {
+      id:1,
+      name:'programar',
+      description:'bsjksbksbskbsk',
+      state:State.PENDIENTE,
+      dateLimit:new Date(12/10/2024)
+    },
+    {
+      id:2,
+      name:'estudiar',
+      description:'bsjksbksbskbsk',
+      state:State.PENDIENTE,
+
+    },
+    {
+      id:3,
+      name:'estudiar',
+      description:'bsjksbksbskbsk',
+      state:State.PENDIENTE,
+
+    }
+  ]*/
    
-  private todosSubscription: Subscription;
+ private todosSubscription: Subscription;
 
   constructor(private taskService : TaskService) {
     this.todosSubscription = this.taskService.getTasks().subscribe((tasks : task[]) => {

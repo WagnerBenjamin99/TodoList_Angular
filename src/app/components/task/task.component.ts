@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { task } from 'src/app/models/task-model';
+import { State, task } from 'src/app/models/task-model';
 import { FormControl, MaxLengthValidator, NgModel } from '@angular/forms'
 import { TaskService } from 'src/app//services/task.service';
-
+import { StatePipe } from 'src/app/pipes/state.pipe';
 
 
 @Component({
@@ -13,7 +13,7 @@ import { TaskService } from 'src/app//services/task.service';
 export class TaskComponent implements OnInit {
  
   constructor (private taskService : TaskService){}
-  tasks : any[] = [];
+  tasks : task[] = [];
   
 
   @Input() task? : task;
@@ -24,20 +24,35 @@ export class TaskComponent implements OnInit {
   description = new FormControl('');
   state = new FormControl('');
   dateLimit = new FormControl('');
+  isChecked : boolean = false;
 
   ngOnInit(): void {
 
   }
 
-
-
   editTask(i : number, editedTask : task){
     this.taskService.updateTask(i, editedTask);
   }
 
-  deleteTaski(i : number){
-   this.taskService.deleteTaks(i);
+  deleteTask(){
+    if(this.task?.id) return this.taskService.deleteTaks(this.task?.id);
   }
 
+  changeState(){
+    if(this.task?.state){
+      if(this.task?.state==State.PENDIENTE){
+        this.task.state=State.COMPLETADA;
+        this.isChecked=true;
+      }
+      else{
+        this.task.state=State.PENDIENTE;
+        this.isChecked=false;
+      }
+       
+      this.taskService.changeState(this.task?.id, this.task?.state);
+
+    }
+    
+  }
   
 }

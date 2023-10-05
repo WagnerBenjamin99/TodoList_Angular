@@ -1,0 +1,25 @@
+.btn-orderby{
+    background-color: transparent;
+    border: none;
+}
+.btn-orderby:hover, .btn-orderby:active{
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-tasks{
+    width: 720px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(150, 33, 150);
+    margin-bottom: 20px;
+}
+
+.navbar-tasks * {
+    margin: 10px;
+}
+
+.navbar-tasks h2{
+    color: white;
+}
